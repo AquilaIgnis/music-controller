@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: musicController
+    build: .
+    env_file:
+      - .env
+    ports:
+      - '811:80' # React frontend
+      - '980:8000' # Django API
+    environment:
+      - Docker=true
+      - REACT_PORT=811
+      - API_PORT=980

@@ -1,0 +1,11 @@
+.AlertComponent {
+    all: revert;
+    /* or: all: initial; */
+    position: fixed;
+    left: 50%;
+    bottom: max(16px, env(safe-area-inset-bottom));
+    /* iOS safe area friendly */
+    transform: translateX(-50%);
+    display: inline-block;
+    z-index: 9999;
+}
